@@ -1,3 +1,5 @@
+import React from "react";
+
 function MovieList({ movies, noResult }) {
   if (!movies || movies.length === 0) {
     return (
@@ -31,3 +33,5 @@ function MovieList({ movies, noResult }) {
     </ul>
   );
 }
+
+export default MovieList;
