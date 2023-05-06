@@ -1,8 +1,10 @@
-import React from "react";
-
 function MovieList({ movies, noResult }) {
   if (!movies || movies.length === 0) {
-    return <div data-testid='noResult'>{noResult}</div>; // Render no result message if there are no movies to display
+    return (
+      <div className='text-center' data-testid='noResult'>
+        <h3>{noResult}</h3>
+      </div>
+    );
   }
 
   return (
@@ -29,5 +31,3 @@ function MovieList({ movies, noResult }) {
     </ul>
   );
 }
-
-export default MovieList;
