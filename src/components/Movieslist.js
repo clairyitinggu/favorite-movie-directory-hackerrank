@@ -1,37 +1,30 @@
 import React from "react";
 
-function MovieList({ movies, noResult }) {
-  if (!movies || movies.length === 0) {
-    return (
-      <div className='text-center' data-testid='noResult'>
-        <h3>{noResult}</h3>
-      </div>
-    );
-  }
-
+function Movieslist({ movies }) {
   return (
-    <ul className='styled w-100 pl-0' data-testid='moviesList'>
-      {movies.map((movie) => (
-        <li key={movie.id} className='slide-up-fade-in py-10'>
-          <div className='flex-1'>
-            <div className='font-weight-bold text--medium'>{movie.name}</div>
-            <div>
-              <span className='font-weight-bold'>Rating:</span>{" "}
-              <span>{movie.rating}/100</span>
+    <section>
+      <ul className='styled w-100 pl-0' data-testid='moviesList'>
+        {movies.map((movie, index) => (
+          <li
+            key={index}
+            className='flex slide-up-fade-in justify-content-between'
+            style={{ borderBottom: "2px solid var(--primary-color)" }}
+          >
+            <div className='layout-column w-40'>
+              {/* use this header for movie name */}
+              <h3 className='my-3'>{movie.name}</h3>
+              {/* use this paragraph for movie ratings, for example: 'Ratings: 88/100' */}
+              <p className='my-0'>Ratings: {movie.rating}/100</p>
             </div>
-            <div>
-              <span className='font-weight-bold'>Duration:</span>{" "}
-              <span>
-                {movie.duration.includes("m")
-                  ? `${Number(movie.duration.slice(0, -1)) / 60} Hrs`
-                  : `${movie.duration} Hrs`}
-              </span>
+            <div className='layout-row my-auto mr-20'>
+              {/* use this paragraph for movie duration, for example: '2.5 Hrs' */}
+              <p className='justify-content-end'>{movie.duration} Hrs</p>
             </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 
-export default MovieList;
+export default Movieslist;
