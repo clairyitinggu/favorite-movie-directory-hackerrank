@@ -35,7 +35,7 @@ function App() {
       <h8k-navbar header={title} />
       <div className='layout-row justify-content-center mt-100'>
         <div className='w-30 mr-75'>
-          <Movieform onAdd={addMovie} />
+          <Movieform onAddMovie={addMovie} />
         </div>
         <div className='layout-column w-30'>
           <Search onSearch={filterMovies} />
