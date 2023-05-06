@@ -6,6 +6,7 @@ function Movieslist(props) {
   return (
     <section>
       <ul className='styled w-100 pl-0' data-testid='moviesList'>
+        {console.log("moveieeeeee>>>>>>>>>>>>>>>>>>>>>>>>", movies)}
         {movies.length > 0 &&
           movies.map((movie, index) => (
             <li
