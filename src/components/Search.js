@@ -1,18 +1,17 @@
-import React from "react";
+import React from 'react'
 
-function Search({ searchText, setSearchText }) {
+function Search() {
+
   return (
     <section className='layout-row justify-content-center mb-40'>
-      <input
+      <input 
         type='text'
-        placeholder='Search for movie by name'
+        placeholder='Search for movie by name' 
         className='w-75 py-2'
         data-testid='search'
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
       />
     </section>
-  );
+  )
 }
 
-export default Search;
+export default Search

@@ -1,5 +1,5 @@
 # React: Favorite Movie Directory
-
+> Notice: main branch is the initial code snippet, solution branch is the solution snippet.Feel free to import the main branch to codesandbox to work out your own solution.
 <span style="font-size: 16px;">Complete a partially completed React movie directory application.</span> Certain core React functionalities have already been implemented. Complete the application as shown below in order to pass all the unit tests.
 
 ![](https://hrcdn.net/s3_pub/istreet-assets/QP-nMkLcgVGyNqz4vKZCtw/favorite-movie-directory.gif)
